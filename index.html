@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6c4ab6">
+  <meta name="description" content="Juego de memorama para poner a prueba tu memoria.">
+  <title>Memorama | Juego de memoria</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand-icon" aria-hidden="true">🧠</div>
+      <div>
+        <p class="eyebrow">PON A PRUEBA TU MEMORIA</p>
+        <h1>Memorama</h1>
+      </div>
+      <button id="installBtn" class="install hidden" type="button">⬇ Instalar app</button>
+    </header>
+
+    <section class="intro">
+      <h2>¡Encuentra todas las parejas!</h2>
+      <p>Voltea dos cartas por turno. Si son iguales, se quedan descubiertas.</p>
+    </section>
+
+    <section class="stats" aria-label="Estadísticas del juego">
+      <div class="stat"><span class="stat-label">Movimientos</span><strong id="moves">0</strong></div>
+      <div class="stat"><span class="stat-label">Parejas</span><strong id="pairs">0 / 8</strong></div>
+      <div class="stat"><span class="stat-label">Tiempo</span><strong id="timer">00:00</strong></div>
+    </section>
+
+    <section id="board" class="board" aria-label="Tablero de memorama"></section>
+
+    <section class="controls">
+      <button id="restartBtn" class="primary" type="button">↻ Reiniciar juego</button>
+      <p id="message" class="message" aria-live="polite">¡Tú puedes! Encuentra las 8 parejas.</p>
+    </section>
+
+    <footer>Proyecto escolar · Aplicación web progresiva (PWA)</footer>
+  </main>
+
+  <div id="winModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+    <div class="modal-card">
+      <div class="trophy">🏆</div>
+      <h2 id="winTitle">¡Lo lograste!</h2>
+      <p>Encontraste todas las parejas.</p>
+      <p id="finalStats" class="final-stats"></p>
+      <button id="playAgainBtn" class="primary" type="button">Jugar otra vez</button>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

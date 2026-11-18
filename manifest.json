@@ -1,0 +1,19 @@
+{
+  "name": "Memorama - Juego de memoria",
+  "short_name": "Memorama",
+  "description": "Juego de memorama para poner a prueba tu memoria.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f1fb",
+  "theme_color": "#6c4ab6",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
